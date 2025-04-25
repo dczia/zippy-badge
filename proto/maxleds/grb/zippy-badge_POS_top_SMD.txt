@@ -1,0 +1,9 @@
+### Module positions - created on 2025-04-07 23:57
+### Printed by pcb_positions plugin
+## Unit = mm, Angle = deg.
+## Pcb Height 99.200mm, Pcb Width 98.167mm [based on Edge bounding box]
+## Side : top
+## Board Aux Origin: 0.000mm ,0.000mm
+# Ref         Val                 Package                       PosX       PosY       Pin1_PosX  Pin1_PosY    Rot     Side      Type
+REF**         LED_SK6812_PLCC4_.. LED_SK6812_PLCC4_5.0x5.0mm_.. 94.0000    -35.0000   91.5500    -33.4000      0.0    top       SMD
+## End
