@@ -1,4 +1,4 @@
-25241763549052357
+25245203868210205
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -101311,6 +101311,13 @@ Varistor VF
 2
 2
 lib_fp
+Back Silk
+
+
+0
+0
+0
+lib_fp
 Badgelife-Shitty-v1.69bis
 Through hole angled pin header, 2x02, 2.54mm pitch, 6mm pin length, double rows
 Through hole angled pin header THT 2x02 2.54mm double row
@@ -101387,6 +101394,13 @@ switch spdt
 0
 3
 3
+lib_fp
+W25Q16JVUXIQ_WIN
+
+W25Q16JVUXIQ 
+0
+9
+9
 lib_fp
 ZiaLogo
 
