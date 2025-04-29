@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "ws2812")(type "KiCad")(uri "C:/Users/hamster/Documents/Development/Badges/dczia/zippy-badge/lib_fp.pretty/ws2812.kicad_sym")(options "")(descr ""))
+)
