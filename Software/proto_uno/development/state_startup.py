@@ -89,5 +89,5 @@ class StartupState(State):
                 pixels[35+y] = color * bitmap[i,y]
             pixels.show()
             time.sleep(.15)
-        machine.go_to_state("party")
+        machine.go_to_state("rave")
 
