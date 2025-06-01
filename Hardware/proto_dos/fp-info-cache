@@ -1,4 +1,4 @@
-25245617528415766
+25250722122462884
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -101339,9 +101339,23 @@ Front Silk
 0
 0
 lib_fp
+Front Silk 2
+
+
+0
+0
+0
+lib_fp
 LED_SK6812_4020
 
 
+0
+4
+4
+lib_fp
+LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update
+5.0mm x 5.0mm Addressable RGB LED NeoPixel, https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf
+LED RGB NeoPixel PLCC-4 5050
 0
 4
 4
@@ -101387,6 +101401,13 @@ Through hole pin header THT 2x20 2.54mm double row
 0
 86
 43
+lib_fp
+SKRHABE010
+
+
+0
+8
+6
 lib_fp
 SW_SPDT_CK-JS102011SAQN
 http://www.ckswitches.com/media/1422/js.pdf

@@ -60,59 +60,63 @@
       ],
       "drc_exclusions": [
         [
-          "hole_clearance|127260000|48660000|59bed61e-136f-4ae1-8867-fb655d61df56|377f9667-e01e-418a-9ad5-9c7109bf62e2",
+          "hole_clearance|156232000|127010000|52380952-db16-42e2-b2b1-7f703462b473|d77cfccc-ebde-4fa1-b1a0-d0f339890d0a",
           ""
         ],
         [
-          "hole_clearance|127260000|48660000|ad4d650d-ed28-4900-a255-c06d44dc6434|377f9667-e01e-418a-9ad5-9c7109bf62e2",
+          "hole_clearance|156232000|127010000|563a1acc-ae94-43c9-bc5c-a26d11be6c61|d77cfccc-ebde-4fa1-b1a0-d0f339890d0a",
           ""
         ],
         [
-          "hole_clearance|133360000|48660000|52380952-db16-42e2-b2b1-7f703462b473|d77cfccc-ebde-4fa1-b1a0-d0f339890d0a",
+          "hole_clearance|162332000|127010000|59bed61e-136f-4ae1-8867-fb655d61df56|377f9667-e01e-418a-9ad5-9c7109bf62e2",
           ""
         ],
         [
-          "hole_clearance|133360000|48660000|563a1acc-ae94-43c9-bc5c-a26d11be6c61|d77cfccc-ebde-4fa1-b1a0-d0f339890d0a",
+          "hole_clearance|162332000|127010000|ad4d650d-ed28-4900-a255-c06d44dc6434|377f9667-e01e-418a-9ad5-9c7109bf62e2",
           ""
         ],
         [
-          "silk_edge_clearance|179283111|135781687|55fa1fe7-e3c0-46e4-9e28-16e27c93b157|0058dd38-1aa4-4322-abd3-c6beb0a958af",
+          "silk_edge_clearance|117679512|45243915|8dd4598f-88ed-4281-bf8e-d0fd613a5cc5|acd58f27-43d6-4df6-ad51-fae032ebc6f5",
           ""
         ],
         [
-          "silk_overlap|154710000|41890000|0058dd38-1aa4-4322-abd3-c6beb0a958af|a29c258d-52ca-4ba9-bbe3-9d185216f1b0",
+          "silk_edge_clearance|126460222|133834263|ee750268-3803-4e55-bcf4-0c9de15fcd37|9d1977d4-e7c5-46b1-a4d6-2c199530917f",
           ""
         ],
         [
-          "silk_overlap|154710000|42031365|0058dd38-1aa4-4322-abd3-c6beb0a958af|31f21180-6888-4213-90ae-8e6405d46549",
+          "silk_edge_clearance|129982000|133834151|ee750268-3803-4e55-bcf4-0c9de15fcd37|109a14f9-ddac-40d6-b60b-980229f8f5e8",
           ""
         ],
         [
-          "silk_overlap|155510000|41890000|0058dd38-1aa4-4322-abd3-c6beb0a958af|79306661-4544-47b1-b5ac-26fb33cfe245",
+          "silk_edge_clearance|133982000|133834024|ee750268-3803-4e55-bcf4-0c9de15fcd37|dd86415e-6ad1-4a0f-a959-90041085d9ae",
           ""
         ],
         [
-          "silk_overlap|157210000|41890000|0058dd38-1aa4-4322-abd3-c6beb0a958af|7a82c284-39e4-4d44-8117-ee1b26532f0e",
+          "silk_edge_clearance|204411736|44123711|a71bfcff-9b07-4230-8544-d4c51ae3275d|2596523d-2ef6-4746-9328-aff15f7d04e3",
           ""
         ],
         [
-          "silk_overlap|157210000|42031365|0058dd38-1aa4-4322-abd3-c6beb0a958af|e393fd26-c085-4c3b-810c-846d97b68479",
+          "silk_over_copper|126593260|54287374|9d1977d4-e7c5-46b1-a4d6-2c199530917f|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "silk_overlap|158010000|41890000|0058dd38-1aa4-4322-abd3-c6beb0a958af|7fe637d3-bd92-42a6-a041-040237df069c",
+          "silk_overlap|129982000|134080000|109a14f9-ddac-40d6-b60b-980229f8f5e8|9d1977d4-e7c5-46b1-a4d6-2c199530917f",
           ""
         ],
         [
-          "silk_overlap|159710000|41890000|0058dd38-1aa4-4322-abd3-c6beb0a958af|86e7a7cd-aa7a-4b79-80aa-e75bfb56ee89",
+          "silk_overlap|133982000|134080000|9d1977d4-e7c5-46b1-a4d6-2c199530917f|dd86415e-6ad1-4a0f-a959-90041085d9ae",
           ""
         ],
         [
-          "silk_overlap|159710000|42031365|0058dd38-1aa4-4322-abd3-c6beb0a958af|255526c4-17c4-41ef-851f-d5dca479dbd2",
+          "track_dangling|132350000|113480000|67deb475-18d5-42cb-be9a-37768c2e61d6|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "silk_overlap|160510000|41890000|0058dd38-1aa4-4322-abd3-c6beb0a958af|5ffd264a-cdfd-4013-881f-8c11c79d184f",
+          "track_dangling|140920000|104320000|ac948bf1-57e4-4d9a-b3c7-2bb15fe5adc8|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "track_dangling|140930000|104850000|a5f29e1d-254a-4246-a525-bf20582f2e75|00000000-0000-0000-0000-000000000000",
           ""
         ]
       ],
@@ -577,7 +581,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "zippy-badge.step",
       "svg": "",
       "vrml": ""
     },

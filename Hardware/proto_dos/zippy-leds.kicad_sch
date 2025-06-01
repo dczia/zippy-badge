@@ -1055,7 +1055,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 95.25 96.52 0)
 			(effects
 				(font
@@ -1132,7 +1132,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 110.49 191.77 0)
 			(effects
 				(font
@@ -1339,7 +1339,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 64.77 160.02 0)
 			(effects
 				(font
@@ -1482,7 +1482,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 49.53 64.77 0)
 			(effects
 				(font
@@ -1624,7 +1624,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 110.49 96.52 0)
 			(effects
 				(font
@@ -1701,7 +1701,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 125.73 33.02 0)
 			(effects
 				(font
@@ -1844,7 +1844,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 140.97 33.02 0)
 			(effects
 				(font
@@ -1986,7 +1986,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 80.01 96.52 0)
 			(effects
 				(font
@@ -3116,7 +3116,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 95.25 33.02 0)
 			(effects
 				(font
@@ -3324,7 +3324,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 80.01 64.77 0)
 			(effects
 				(font
@@ -4189,7 +4189,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 140.97 160.02 0)
 			(effects
 				(font
@@ -4659,7 +4659,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 64.77 96.52 0)
 			(effects
 				(font
@@ -4736,7 +4736,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 140.97 128.27 0)
 			(effects
 				(font
@@ -4813,7 +4813,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 110.49 64.77 0)
 			(effects
 				(font
@@ -5023,7 +5023,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 80.01 33.02 0)
 			(effects
 				(font
@@ -5165,7 +5165,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 80.01 128.27 0)
 			(effects
 				(font
@@ -5503,7 +5503,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 80.01 191.77 0)
 			(effects
 				(font
@@ -5712,7 +5712,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 95.25 128.27 0)
 			(effects
 				(font
@@ -5789,7 +5789,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 125.73 128.27 0)
 			(effects
 				(font
@@ -5996,7 +5996,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 125.73 160.02 0)
 			(effects
 				(font
@@ -6073,7 +6073,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 125.73 64.77 0)
 			(effects
 				(font
@@ -6150,7 +6150,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 140.97 191.77 0)
 			(effects
 				(font
@@ -6292,7 +6292,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 140.97 64.77 0)
 			(effects
 				(font
@@ -6565,7 +6565,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 64.77 33.02 0)
 			(effects
 				(font
@@ -6707,7 +6707,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 64.77 191.77 0)
 			(effects
 				(font
@@ -6784,7 +6784,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 49.53 96.52 0)
 			(effects
 				(font
@@ -6861,7 +6861,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 49.53 191.77 0)
 			(effects
 				(font
@@ -7004,7 +7004,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 49.53 160.02 0)
 			(effects
 				(font
@@ -7280,7 +7280,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 49.53 33.02 0)
 			(effects
 				(font
@@ -7487,7 +7487,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 49.53 128.27 0)
 			(effects
 				(font
@@ -8610,7 +8610,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 95.25 64.77 0)
 			(effects
 				(font
@@ -8753,7 +8753,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 64.77 64.77 0)
 			(effects
 				(font
@@ -8830,7 +8830,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 125.73 191.77 0)
 			(effects
 				(font
@@ -8907,7 +8907,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 80.01 160.02 0)
 			(effects
 				(font
@@ -9506,7 +9506,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 110.49 33.02 0)
 			(effects
 				(font
@@ -9583,7 +9583,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 95.25 191.77 0)
 			(effects
 				(font
@@ -9790,7 +9790,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 64.77 128.27 0)
 			(effects
 				(font
@@ -9867,7 +9867,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 125.73 96.52 0)
 			(effects
 				(font
@@ -9944,7 +9944,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 140.97 96.52 0)
 			(effects
 				(font
@@ -10612,7 +10612,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 110.49 160.02 0)
 			(effects
 				(font
@@ -10689,7 +10689,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 110.49 128.27 0)
 			(effects
 				(font
@@ -10897,7 +10897,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(property "Footprint" "lib_fp:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm_Update"
 			(at 95.25 160.02 0)
 			(effects
 				(font
