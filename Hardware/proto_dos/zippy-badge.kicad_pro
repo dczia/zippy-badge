@@ -60,27 +60,23 @@
       ],
       "drc_exclusions": [
         [
-          "hole_clearance|156232000|127010000|52380952-db16-42e2-b2b1-7f703462b473|d77cfccc-ebde-4fa1-b1a0-d0f339890d0a",
+          "hole_clearance|156232000|127760000|52380952-db16-42e2-b2b1-7f703462b473|d77cfccc-ebde-4fa1-b1a0-d0f339890d0a",
           ""
         ],
         [
-          "hole_clearance|156232000|127010000|563a1acc-ae94-43c9-bc5c-a26d11be6c61|d77cfccc-ebde-4fa1-b1a0-d0f339890d0a",
+          "hole_clearance|156232000|127760000|563a1acc-ae94-43c9-bc5c-a26d11be6c61|d77cfccc-ebde-4fa1-b1a0-d0f339890d0a",
           ""
         ],
         [
-          "hole_clearance|162332000|127010000|59bed61e-136f-4ae1-8867-fb655d61df56|377f9667-e01e-418a-9ad5-9c7109bf62e2",
+          "hole_clearance|162332000|127760000|59bed61e-136f-4ae1-8867-fb655d61df56|377f9667-e01e-418a-9ad5-9c7109bf62e2",
           ""
         ],
         [
-          "hole_clearance|162332000|127010000|ad4d650d-ed28-4900-a255-c06d44dc6434|377f9667-e01e-418a-9ad5-9c7109bf62e2",
+          "hole_clearance|162332000|127760000|ad4d650d-ed28-4900-a255-c06d44dc6434|377f9667-e01e-418a-9ad5-9c7109bf62e2",
           ""
         ],
         [
           "silk_edge_clearance|117679512|45243915|8dd4598f-88ed-4281-bf8e-d0fd613a5cc5|acd58f27-43d6-4df6-ad51-fae032ebc6f5",
-          ""
-        ],
-        [
-          "silk_edge_clearance|126460222|133834263|ee750268-3803-4e55-bcf4-0c9de15fcd37|9d1977d4-e7c5-46b1-a4d6-2c199530917f",
           ""
         ],
         [
@@ -92,11 +88,31 @@
           ""
         ],
         [
+          "silk_edge_clearance|196270000|126610000|398d0781-1420-4d97-b81b-657823e8c570|ed17e2e8-f931-411e-b853-32532119ea32",
+          ""
+        ],
+        [
           "silk_edge_clearance|204411736|44123711|a71bfcff-9b07-4230-8544-d4c51ae3275d|2596523d-2ef6-4746-9328-aff15f7d04e3",
           ""
         ],
         [
-          "silk_over_copper|126593260|54287374|9d1977d4-e7c5-46b1-a4d6-2c199530917f|00000000-0000-0000-0000-000000000000",
+          "silk_edge_clearance|206386587|127209862|c420f9b7-f6b8-494a-8493-66e1ad997aa7|9d1977d4-e7c5-46b1-a4d6-2c199530917f",
+          ""
+        ],
+        [
+          "silk_over_copper|126460222|54108140|9d1977d4-e7c5-46b1-a4d6-2c199530917f|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "silk_over_copper|138227186|111339781|6d24a62e-90b9-4eab-b589-40f278faa6c2|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "silk_over_copper|159652514|89469430|5b24011c-0299-4ff1-abdc-063a9e6f24e1|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "silk_over_copper|188705762|112900622|ed17e2e8-f931-411e-b853-32532119ea32|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
@@ -578,7 +594,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "output",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "zippy-badge.step",
@@ -701,7 +717,7 @@
     },
     "net_format_name": "",
     "page_layout_descr_file": "",
-    "plot_directory": "",
+    "plot_directory": "output/",
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
