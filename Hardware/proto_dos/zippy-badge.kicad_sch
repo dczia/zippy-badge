@@ -7313,6 +7313,12 @@
 		(uuid "8e1da530-3a33-4343-ad9c-c6dcefb4cf54")
 	)
 	(junction
+		(at 218.186 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8e623a8d-2d0e-468c-b955-16a00b4c7a33")
+	)
+	(junction
 		(at 81.534 192.024)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7349,12 +7355,6 @@
 		(uuid "c222c02d-230d-4b7d-a42c-5bf53d38f9e1")
 	)
 	(junction
-		(at 212.09 69.85)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c977ed73-ba95-4136-83dc-6a974060b7c8")
-	)
-	(junction
 		(at 212.09 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7371,6 +7371,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e862ff4e-409c-40d1-8fcb-53e35216cd49")
+	)
+	(junction
+		(at 240.03 72.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ef415213-11cb-45f0-b193-4e818d42444f")
 	)
 	(junction
 		(at 52.832 27.178)
@@ -7403,7 +7409,7 @@
 		(uuid "d24381a3-211a-40be-bccc-25251c153ad3")
 	)
 	(no_connect
-		(at 217.17 74.93)
+		(at 220.218 74.93)
 		(uuid "fd857391-bf05-4b32-9697-14a4aa1a8eda")
 	)
 	(wire
@@ -7998,16 +8004,6 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 69.85) (xy 212.09 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5c5fff4d-4682-4940-9b80-adef52a6b391")
-	)
-	(wire
-		(pts
 			(xy 181.61 127.254) (xy 177.8 127.254)
 		)
 		(stroke
@@ -8218,7 +8214,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 72.39) (xy 229.87 72.39)
+			(xy 230.378 72.39) (xy 232.41 72.39)
 		)
 		(stroke
 			(width 0)
@@ -8355,6 +8351,16 @@
 			(type default)
 		)
 		(uuid "84bd8660-3bd7-40e2-b8be-e0cc8b14b7a3")
+	)
+	(wire
+		(pts
+			(xy 214.122 69.85) (xy 218.186 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86398362-9a85-4521-9679-2a0e1237469e")
 	)
 	(wire
 		(pts
@@ -8505,6 +8511,16 @@
 			(type default)
 		)
 		(uuid "9e425e27-70bd-49d1-ac05-d96cc1cd3ce6")
+	)
+	(wire
+		(pts
+			(xy 218.186 69.85) (xy 220.218 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ef237e6-bed7-40d9-8670-c31dad537495")
 	)
 	(wire
 		(pts
@@ -8678,7 +8694,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 66.04) (xy 212.09 69.85)
+			(xy 218.186 65.786) (xy 218.186 69.85)
 		)
 		(stroke
 			(width 0)
@@ -8725,16 +8741,6 @@
 			(type default)
 		)
 		(uuid "bceb3833-cac9-4acb-a82d-a05f3f05adfd")
-	)
-	(wire
-		(pts
-			(xy 212.09 69.85) (xy 217.17 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bdfbdb67-8808-4bf1-9035-88c5dbefe6ba")
 	)
 	(wire
 		(pts
@@ -8938,7 +8944,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 66.04) (xy 205.74 69.85)
+			(xy 202.438 66.04) (xy 202.438 69.85)
 		)
 		(stroke
 			(width 0)
@@ -9185,6 +9191,16 @@
 			(type default)
 		)
 		(uuid "f6bddbe7-2d7a-4df5-821d-9629e5ba2dbe")
+	)
+	(wire
+		(pts
+			(xy 202.438 69.85) (xy 206.502 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8ae594c-b4da-4c64-a774-6326ea9b4ef9")
 	)
 	(wire
 		(pts
@@ -11133,6 +11149,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 210.312 69.85 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "07369a91-78fd-4360-8ae9-f29349ca44af")
+		(property "Reference" "D45"
+			(at 210.566 64.516 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D_Schottky"
+			(at 210.566 66.548 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
+			(at 210.312 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 210.312 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 210.312 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "590fe041-4db0-474c-b3e0-4b2e52cbc9e6")
+		)
+		(pin "2"
+			(uuid "f2877ac4-c57d-481d-8eae-3e8afe7799e8")
+		)
+		(instances
+			(project "zippy-badge"
+				(path "/2f5e3b6b-e0ac-4904-9222-e2ea7797e398"
+					(reference "D45")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:Crystal_GND24")
 		(at 32.512 90.678 90)
 		(unit 1)
@@ -12487,7 +12570,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 205.74 66.04 0)
+		(at 202.438 66.04 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12495,7 +12578,7 @@
 		(dnp no)
 		(uuid "3181d65d-cbc0-4bbd-927a-5d28cad505f7")
 		(property "Reference" "#PWR011"
-			(at 205.74 69.85 0)
+			(at 202.438 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12504,7 +12587,7 @@
 			)
 		)
 		(property "Value" "VBUS"
-			(at 203.2 62.484 0)
+			(at 199.898 62.484 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12513,7 +12596,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 205.74 66.04 0)
+			(at 202.438 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12522,7 +12605,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 205.74 66.04 0)
+			(at 202.438 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12531,7 +12614,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 205.74 66.04 0)
+			(at 202.438 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15066,7 +15149,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_SPDT")
-		(at 222.25 72.39 180)
+		(at 225.298 72.39 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15074,7 +15157,7 @@
 		(dnp no)
 		(uuid "a366e197-57b1-4f8b-98b9-c307c9671a83")
 		(property "Reference" "SW2"
-			(at 222.25 64.135 0)
+			(at 225.298 64.135 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15082,7 +15165,7 @@
 			)
 		)
 		(property "Value" "SW_SPDT"
-			(at 222.25 66.4464 0)
+			(at 225.298 66.4464 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15090,7 +15173,7 @@
 			)
 		)
 		(property "Footprint" "lib_fp:SW_SPDT_CK-JS102011SAQN"
-			(at 222.25 72.39 0)
+			(at 225.298 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15099,7 +15182,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 222.25 72.39 0)
+			(at 225.298 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15108,7 +15191,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 222.25 72.39 0)
+			(at 225.298 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16371,7 +16454,7 @@
 	(symbol
 		(lib_name "VCC_2")
 		(lib_id "power:VCC")
-		(at 212.09 66.04 0)
+		(at 218.186 65.786 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16379,7 +16462,7 @@
 		(dnp no)
 		(uuid "ca97e340-cd44-48c8-800f-19f9bcd80515")
 		(property "Reference" "#PWR12"
-			(at 212.09 69.85 0)
+			(at 218.186 69.596 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16388,7 +16471,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 212.09 62.484 0)
+			(at 218.186 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16396,7 +16479,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 212.09 66.04 0)
+			(at 218.186 65.786 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16405,7 +16488,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 212.09 66.04 0)
+			(at 218.186 65.786 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16414,7 +16497,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 212.09 66.04 0)
+			(at 218.186 65.786 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16501,7 +16584,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_Schottky")
-		(at 233.68 72.39 0)
+		(at 236.22 72.39 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16510,7 +16593,7 @@
 		(fields_autoplaced yes)
 		(uuid "cdea75c3-7858-4fb8-8e54-f53b653d961f")
 		(property "Reference" "D1"
-			(at 233.3625 68.1101 0)
+			(at 235.9025 68.1101 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16518,7 +16601,7 @@
 			)
 		)
 		(property "Value" "D_Schottky"
-			(at 233.3625 70.0311 0)
+			(at 235.9025 70.0311 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16526,7 +16609,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123F"
-			(at 233.68 72.39 0)
+			(at 236.22 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16535,7 +16618,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 233.68 72.39 0)
+			(at 236.22 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16544,7 +16627,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 233.68 72.39 0)
+			(at 236.22 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
