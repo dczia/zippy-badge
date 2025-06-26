@@ -7373,12 +7373,6 @@
 		(uuid "e862ff4e-409c-40d1-8fcb-53e35216cd49")
 	)
 	(junction
-		(at 240.03 72.39)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ef415213-11cb-45f0-b193-4e818d42444f")
-	)
-	(junction
 		(at 52.832 27.178)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7401,12 +7395,28 @@
 		(uuid "33e1a54a-99cf-4d7d-b15f-4b7004c73cb3")
 	)
 	(no_connect
+		(at 43.942 52.578)
+		(uuid "48541e29-249c-4f45-987e-3a792d33dd6e")
+	)
+	(no_connect
+		(at 94.234 176.276)
+		(uuid "5138254a-d92f-4c6a-8ef6-0c165aaa6a51")
+	)
+	(no_connect
 		(at 218.44 44.45)
 		(uuid "b071d568-a0ba-4196-989b-669b5eb6e833")
 	)
 	(no_connect
+		(at 94.234 173.482)
+		(uuid "c5365bf0-3571-4e15-ad27-0ec1d5946c3d")
+	)
+	(no_connect
 		(at 218.44 41.91)
 		(uuid "d24381a3-211a-40be-bccc-25251c153ad3")
+	)
+	(no_connect
+		(at 43.942 50.038)
+		(uuid "eb792eba-27e9-4f6e-96bd-e4a6d02aebfc")
 	)
 	(no_connect
 		(at 220.218 74.93)
@@ -7594,6 +7604,16 @@
 	)
 	(wire
 		(pts
+			(xy 232.156 72.39) (xy 230.378 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a0b3451-3342-4b75-99ae-862eb2309872")
+	)
+	(wire
+		(pts
 			(xy 215.9 31.75) (xy 218.44 31.75)
 		)
 		(stroke
@@ -7671,16 +7691,6 @@
 			(type default)
 		)
 		(uuid "2b68cb55-f86c-4af4-a6ae-d13a0ce743ce")
-	)
-	(wire
-		(pts
-			(xy 181.61 142.494) (xy 177.8 142.494)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2b7fcc2d-b731-4cf2-b799-67e318d72268")
 	)
 	(wire
 		(pts
@@ -8214,16 +8224,6 @@
 	)
 	(wire
 		(pts
-			(xy 230.378 72.39) (xy 232.41 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "74576c76-ef4e-4170-b2e0-e18f0c1dc134")
-	)
-	(wire
-		(pts
 			(xy 78.994 189.484) (xy 78.994 192.024)
 		)
 		(stroke
@@ -8321,16 +8321,6 @@
 			(type default)
 		)
 		(uuid "809e3150-23a6-4eaf-84c5-5ba03e4146a4")
-	)
-	(wire
-		(pts
-			(xy 237.49 72.39) (xy 240.03 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "814df051-6192-49f4-b312-f1cc88af29d7")
 	)
 	(wire
 		(pts
@@ -8651,6 +8641,16 @@
 			(type default)
 		)
 		(uuid "a9f6f793-32c2-4ff3-84b5-b8752ab32bcc")
+	)
+	(wire
+		(pts
+			(xy 239.776 72.39) (xy 240.03 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aaf22c2a-2a25-4f71-b9b0-bdba26de03ed")
 	)
 	(wire
 		(pts
@@ -11884,6 +11884,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 177.8 142.494 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1cc3ab82-c4c7-47f0-a732-be1b93a94f07")
+		(property "Reference" "TP6"
+			(at 182.372 142.494 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 182.88 143.764 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 177.8 147.574 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 177.8 147.574 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 177.8 142.494 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c3354c3b-fb6f-49d7-a0a5-9017210bf88c")
+		)
+		(instances
+			(project "zippy-badge"
+				(path "/2f5e3b6b-e0ac-4904-9222-e2ea7797e398"
+					(reference "TP6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 40.132 90.678 0)
 		(unit 1)
@@ -14475,6 +14542,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 177.8 104.394 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "78614509-ce84-4b4c-8503-c258fc8b470e")
+		(property "Reference" "TP5"
+			(at 182.372 104.394 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 182.88 105.664 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 177.8 109.474 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 177.8 109.474 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 177.8 104.394 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "48e15d8b-b478-466e-a48f-68a2f69f6014")
+		)
+		(instances
+			(project "zippy-badge"
+				(path "/2f5e3b6b-e0ac-4904-9222-e2ea7797e398"
+					(reference "TP5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 62.992 192.024 0)
 		(unit 1)
@@ -14740,6 +14874,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 177.8 101.854 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8d01fdf8-aec4-48b0-9489-1e83a6818479")
+		(property "Reference" "TP4"
+			(at 182.372 101.854 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 182.88 103.124 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 177.8 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 177.8 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 177.8 101.854 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bda4c0b6-b279-4c15-9337-7a9620232f07")
+		)
+		(instances
+			(project "zippy-badge"
+				(path "/2f5e3b6b-e0ac-4904-9222-e2ea7797e398"
+					(reference "TP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 243.84 99.06 0)
 		(unit 1)
@@ -14946,6 +15147,73 @@
 			(project "zippy-badge"
 				(path "/2f5e3b6b-e0ac-4904-9222-e2ea7797e398"
 					(reference "#PWR030")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 177.8 71.374 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "948dea4d-5065-4d29-b1b7-116a13938198")
+		(property "Reference" "TP3"
+			(at 182.372 71.374 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 182.88 72.644 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 177.8 76.454 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 177.8 76.454 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 177.8 71.374 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "47f0fe32-7ce3-4375-8d83-7d690b7839b9")
+		)
+		(instances
+			(project "zippy-badge"
+				(path "/2f5e3b6b-e0ac-4904-9222-e2ea7797e398"
+					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -16584,7 +16852,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_Schottky")
-		(at 236.22 72.39 0)
+		(at 235.966 72.39 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16593,7 +16861,7 @@
 		(fields_autoplaced yes)
 		(uuid "cdea75c3-7858-4fb8-8e54-f53b653d961f")
 		(property "Reference" "D1"
-			(at 235.9025 68.1101 0)
+			(at 235.6485 68.1101 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16601,7 +16869,7 @@
 			)
 		)
 		(property "Value" "D_Schottky"
-			(at 235.9025 70.0311 0)
+			(at 235.6485 70.0311 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16609,7 +16877,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123F"
-			(at 236.22 72.39 0)
+			(at 235.966 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16618,7 +16886,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 236.22 72.39 0)
+			(at 235.966 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16627,7 +16895,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 236.22 72.39 0)
+			(at 235.966 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
