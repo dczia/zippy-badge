@@ -1,4 +1,3 @@
-import os
 import board
 import busio
 import digitalio
@@ -52,6 +51,26 @@ dpad_right.pull = Pull.UP
 dpad_button = DigitalInOut(board.GP12)
 dpad_button.direction = Direction.INPUT
 dpad_button.pull = Pull.UP
+
+
+# function to look for dpad input
+def scan_dpad(previous_input):
+    if dpad_up.value is True:
+        current_input = "up"
+    elif dpad_down.value is True:
+        current_input = "down"
+    elif dpad_left.value is True:
+        current_input = "left"
+    elif dpad_right.value is True:
+        current_input = "right"
+    elif dpad_button.value is True:
+        current_input = "select"
+    else:
+        current_input = "none"
+    if current_input != previous_input:
+        return current_input
+    else:
+        return "none"
 
 
 # Setup SD Card
