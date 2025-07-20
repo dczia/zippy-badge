@@ -1,5 +1,6 @@
 import board
 import busio
+import storage
 import digitalio
 import neopixel
 from time import sleep
