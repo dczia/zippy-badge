@@ -83,11 +83,12 @@ class StartupState(State):
                 self.hue = self.hue - 256
             color = colorwheel(self.hue)
             # Scoot the old text left by 1 pixel
-            pixels[:35] = pixels[7:]
+            pixels[7:41] = pixels[:34]
             # Draw in the next line of text
             for y in range(7):
                 # Select black or color depending on the bitmap pixel
-                pixels[35+y] = color * self.bitmap[i,y]
+                #pixels[35+y] = color * self.bitmap[i,y]
+                pixels[6-y] = color * self.bitmap[i,y]
             pixels.show()
             time.sleep(.15)
         machine.go_to_state("party")
