@@ -631,7 +631,7 @@
       "idf": "",
       "netlist": "",
       "plot": "output",
-      "pos_files": "",
+      "pos_files": "output/",
       "specctra_dsn": "",
       "step": "zippy-badge.step",
       "svg": "",
@@ -696,6 +696,12 @@
           "group_by": false,
           "label": "#",
           "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "DNP",
+          "name": "DNP",
           "show": false
         },
         {
