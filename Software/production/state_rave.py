@@ -80,39 +80,37 @@ class RaveState(State):
                 data
             )
 
-
-
-            #bins = [data[0],data[1],data[8],data[10],data[12],data[14]]
-            bins = [data[14],data[12],data[10],data[8],data[1],data[0]]
+            bins = [data[30],data[10],data[8],data[7],data[4],data[1]]
 
             self.running_max = (self.running_max * 4 + max(bins))/5
             self.running_min = (self.running_min * 4 + min(bins))/5
 
-            print(f"Bins: {bins}\n")
-            print(f"Max: {self.running_max}\n")
-            print(f"Min: {self.running_min}\n")
+            #print(f"Bins: {bins}\n")
+            #print(f"Max: {self.running_max}\n")
+            #print(f"Min: {self.running_min}\n")
 
             pixels.fill((0,0,0))
             column = [(255,0,0),(255,0,0),(192,0,64),(128,0,128),(64,0,192),(0,0,255),(0,0,255)]
             pixels.fill((0,0,0))
             for index,item in enumerate(bins):
-                if index > -1 and index < 13 :
+                #if index > -1 and index < 13 :
                     #index -= 7
-                    step = (self.running_max-self.running_min)/6
-                    pixels[(index) * 7] = column[6]
+                    step = (self.running_max-self.running_min)/7
                     if item > step + self.running_min:
-                        pixels[(index) * 7 + 1] = column[5]
-                    if item > step*2 + self.running_min:
-                        pixels[(index) * 7 + 2] = column[4]
+                        pixels[(index) * 7] = column[6]
+                    if item > step*2 + self.running_min: 
+                        pixels[(index) * 7 + 1]  = column[5]
                     if item > step*3 + self.running_min:
-                        pixels[(index) * 7 + 3] = column[3]
+                        pixels[(index) * 7 + 2] = column[4]
                     if item > step*4 + self.running_min:
-                        pixels[(index) * 7 + 4] = column[2]
+                        pixels[(index) * 7 + 3] = column[3]
                     if item > step*5 + self.running_min:
-                        pixels[(index) * 7 + 5] = column[1]
+                        pixels[(index) * 7 + 4] = column[2]
                     if item > step*6 + self.running_min:
+                        pixels[(index) * 7 + 5] = column[1]
+                    if item > step*7 + self.running_min:
                         pixels[(index) * 7 + 6] = column[0]
             pixels.show()
-            time.sleep(0.05)
         except:
             pass  
+        time.sleep(0.05)
