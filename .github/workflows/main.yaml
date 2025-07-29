@@ -1,0 +1,45 @@
+name: Zippy Badge
+
+on:
+  push:
+    branches:
+      - main
+      - '*'
+  pull_request:
+  workflow_dispatch:
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Install MicroPython
+      uses: BrianPugh/install-micropython@v2
+      #Installs at /home/runner/micropython
+
+    - name: Install Arm GNU Toolchain (arm-none-eabi-gcc)
+      uses: carlosperate/arm-none-eabi-gcc-action@v1
+
+    - name: Copy files for build
+      run: cp -rv Software/production/* /home/runner/micropython/ports/rp2/modules
+
+    - name: Run make submodules?
+      run: |
+        cd /home/runner/micropython
+        ls -lah
+        pwd
+        git submodule update --init lib/pico-sdk lib/tinyusb
+
+    - name: Run make?
+      run: |
+        cd /home/runner/micropython/ports/rp2
+        ls -lah
+        pwd
+        make BOARD=RPI_PICO submodules
+        make
+      env:
+        CC:   gcc
+        CXX:  g++
