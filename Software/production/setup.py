@@ -7,13 +7,15 @@ from time import sleep
 import adafruit_sdcard
 import pio_i2s
 import adafruit_msa3xx
-from digitalio import DigitalInOut, Direction, Pull
 import keypad
 
 # Setup neopixels
 pixel_pin = board.GP13
 num_pixels = 42
-pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.05, auto_write=False)
+current_brightness = 0.1
+pixels = neopixel.NeoPixel(
+    pixel_pin, num_pixels, brightness=current_brightness, auto_write=False
+)
 
 # Setup microphone
 # Uncomment the following
@@ -54,13 +56,13 @@ try:
     storage.mount(vfs, "/sd")
 except:
     # add some feedback if it doesn't mount
-    pixels.brightness = .05
-    pixels.fill((255,0,0))
+    pixels.brightness = 0.05
+    pixels.fill((255, 0, 0))
     pixels.show()
     sleep(0.2)
-    pixels.fill((0,255,0))
+    pixels.fill((0, 255, 0))
     pixels.show()
     sleep(0.2)
-    pixels.fill((0,0,255))
+    pixels.fill((0, 0, 255))
     pixels.show()
     sleep(0.2)

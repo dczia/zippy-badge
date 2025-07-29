@@ -1,9 +1,11 @@
-from setup import pixels, num_pixels
+from setup import pixels
 from setup import keys
 from setup import sensor
 from state import State
 from rainbowio import colorwheel
-#from menu import menu_select, show_menu, show_select
+from setup import current_brightness
+
+# from menu import menu_select, show_menu, show_select
 
 
 class AccelState(State):
@@ -17,11 +19,13 @@ class AccelState(State):
         self.target_hue = 0
 
     def enter(self, machine):
-        pixels.fill((0,0,0))
-        pixels.brightness = 0.1
+        global current_brightness
+        pixels.fill((0, 0, 0))
+        self.brightness = current_brightness
         State.enter(self, machine)
 
     def exit(self, machine):
+        current_brightness = self.brightness
         State.exit(self, machine)
 
     def update(self, machine):
@@ -31,6 +35,18 @@ class AccelState(State):
             if event.pressed:
                 if event.key_number == 1:
                     machine.go_to_state("rave")
+
+                # Brightness controls
+                elif event.key_number == 0:
+                    if self.brightness <= 0.5:
+                        self.brightness += 0.05
+                        pixels.brightness = self.brightness
+                elif event.key_number == 4:
+                    if self.brightness >= 0.05:
+                        self.brightness -= 0.05
+                    else:
+                        self.brightness = 0.0
+                    pixels.brightness = self.brightness
 
         # Get accelerometer data
         acc_x, acc_y, acc_z = sensor.acceleration
@@ -66,4 +82,3 @@ class AccelState(State):
         # Fill the entire LED grid with the color
         pixels.fill(color)
         pixels.show()
- 

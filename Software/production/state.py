@@ -1,5 +1,6 @@
 import time
-#from setup import rotary_enc
+
+# from setup import rotary_enc
 
 
 class State(object):
@@ -25,10 +26,10 @@ class StateMachine(object):
     def __init__(self):
         self.state = None
         self.states = {}
-        #self.last_enc1_pos = rotary_enc.value()
-        #self.paused_state = None
+        # self.last_enc1_pos = rotary_enc.value()
+        # self.paused_state = None
         self.ticks_ms = 0
-        #self.animation = None
+        # self.animation = None
 
     def add_state(self, state):
         self.states[state.name] = state
