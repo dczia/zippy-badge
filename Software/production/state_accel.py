@@ -51,8 +51,13 @@ class AccelState(State):
         # Get accelerometer data
         acc_x, acc_y, acc_z = sensor.acceleration
 
-        # Set target hue based on tilt direction
-        if abs(acc_x) > abs(acc_y):
+        # Set target hue based on tilt direction and vertical movement
+        if abs(acc_z) > 3:  # Significant vertical movement
+            if acc_z > 0:  # Moving up
+                self.target_hue = 42  # Orange
+            else:  # Moving down
+                self.target_hue = 128  # Cyan
+        elif abs(acc_x) > abs(acc_y):
             if acc_x > 0:  # Tilted right
                 self.target_hue = 0  # Red
             else:  # Tilted left
