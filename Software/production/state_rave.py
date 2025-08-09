@@ -8,6 +8,7 @@ from setup import mic
 from state import State
 from setup import keys
 from setup import current_brightness
+from state import State
 
 
 def led_array(pixels, column, row, color):
@@ -47,6 +48,8 @@ class RaveState(State):
 
     def exit(self, machine):
         current_brightness = self.brightness
+        pixels.fill((0,0,0))
+        pixels.show()
         State.exit(self, machine)
 
     def update(self, machine):
@@ -55,7 +58,7 @@ class RaveState(State):
         if event:
             if event.pressed:
                 if event.key_number == 1:
-                    machine.go_to_state("party")
+                    machine.go_to_state("scroll_text")
                 # Brightness controls
                 elif event.key_number == 0:
                     if self.brightness <= 0.5:

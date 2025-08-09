@@ -66,3 +66,4 @@ except:
     pixels.fill((0, 0, 255))
     pixels.show()
     sleep(0.2)
+    pixels.fill((0, 0, 0))

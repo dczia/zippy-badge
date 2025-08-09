@@ -24,7 +24,6 @@ class PartyState(State):
         State.exit(self, machine)
 
     def update(self, machine):
-
         # pixels.brightness = 0.1
         for j in range(255):
             for i in range(num_pixels):
