@@ -45,7 +45,7 @@ class AccelState(State):
                 # Previous pattern
                 elif event.key_number == 3:
                     self.pattern_index = (self.pattern_index - 1) % pattern_count
-                    
+
                 # Brightness controls
                 elif event.key_number == 0:
                     if global_tools.current_brightness <= 0.45:
