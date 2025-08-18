@@ -8,20 +8,6 @@ from setup import mic
 from state import State
 from setup import keys
 from setup import current_brightness
-from state import State
-
-
-def led_array(pixels, column, row, color):
-    try:
-        pixel_index = (5 - column) * 7 + (6 - row)
-        pixels[pixel_index] = color
-    except:
-        pass
-        # print(f"Failed index\n")
-        # print(f"Row: {row}\n")
-        # print(f"Column: {column}\n")
-        # print(f"Index: {pixel_index}\n")
-    return
 
 
 class RaveState(State):
@@ -48,7 +34,7 @@ class RaveState(State):
 
     def exit(self, machine):
         current_brightness = self.brightness
-        pixels.fill((0,0,0))
+        pixels.fill((0, 0, 0))
         pixels.show()
         State.exit(self, machine)
 

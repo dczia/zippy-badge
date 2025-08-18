@@ -1,11 +1,10 @@
 from state import StateMachine
 from state_startup import StartupState
-
-# from state_menu import MenuState
 from state_party import PartyState
 from state_rave import RaveState
 from state_accel import AccelState
 from state_scroll import ScrollState
+
 
 current_brightness = 0.1
 

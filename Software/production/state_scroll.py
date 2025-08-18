@@ -10,7 +10,6 @@ from adafruit_bitmap_font import bitmap_font
 from displayio import Bitmap
 from rainbowio import colorwheel
 from setup import current_brightness
-# from menu import menu_select, show_menu, show_select
 
 
 class ScrollState(State):
@@ -81,7 +80,7 @@ class ScrollState(State):
         self.bitmap = self.label.bitmap
         self.brightness = current_brightness
         self.go_next = False
-        pixels.fill((0,0,0))
+        pixels.fill((0, 0, 0))
         pixels.show()
         State.enter(self, machine)
 
@@ -90,7 +89,7 @@ class ScrollState(State):
         State.exit(self, machine)
 
     def update(self, machine):
-        pixels.fill((0,0,0))
+        pixels.fill((0, 0, 0))
         pixels.show()
         for i in range(self.bitmap.width):
             event = keys.events.get()
@@ -110,21 +109,19 @@ class ScrollState(State):
                         else:
                             self.brightness = 0.0
                         pixels.brightness = self.brightness
+                        
             # Use a rainbow of colors, shifting each column of pixels
             self.hue = self.hue + 7
             if self.hue >= 256:
                 self.hue = self.hue - 256
             color = colorwheel(self.hue)
+
             # Scoot the old text left by 1 pixel
             pixels[7:41] = pixels[:34]
+
             # Draw in the next line of text
             for y in range(7):
                 # Select black or color depending on the bitmap pixel
-                # pixels[35+y] = color * self.bitmap[i,y]
                 pixels[6 - y] = color * self.bitmap[i, y]
             pixels.show()
             time.sleep(0.15)
-
- 
-        #machine.go_to_state("party")
-
