@@ -5,10 +5,6 @@ from state_rave import RaveState
 from state_accel import AccelState
 from state_scroll import ScrollState
 
-
-current_brightness = 0.1
-
-
 core_machine = StateMachine()
 core_machine.add_state(StartupState())
 core_machine.add_state(PartyState())
