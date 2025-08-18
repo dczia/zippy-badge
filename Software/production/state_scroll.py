@@ -79,7 +79,6 @@ class ScrollState(State):
         self.label.text = "    DCZIA    "
         self.bitmap = self.label.bitmap
         self.go_next = False
-        self.exit_flag = False
         pixels.fill((0, 0, 0))
         pixels.show()
         State.enter(self, machine)
@@ -97,7 +96,8 @@ class ScrollState(State):
             if event:
                 if event.pressed:
                     if event.key_number == 1:
-                        self.exit_flag = True
+                        machine.go_to_state("party")
+                        return
 
                 # Brightness controls
                 elif event.key_number == 0:
@@ -114,9 +114,6 @@ class ScrollState(State):
                         global_tools.current_brightness = 0.0
                     pixels.brightness = global_tools.current_brightness
 
-            if self.exit_flag is True:
-                machine.go_to_state("party")
-                break
 
             # Use a rainbow of colors, shifting each column of pixels
             self.hue = self.hue + 7

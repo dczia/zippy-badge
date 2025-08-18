@@ -59,10 +59,9 @@ class RaveState(State):
                         global_tools.current_brightness = 0.0
                     pixels.brightness = global_tools.current_brightness
 
-        # Adding to smooth the transition between modes
         if self.exit_flag is True:
             machine.go_to_state("scroll_text")
-        
+
         else:
             try:
                 # Get mic sample

@@ -90,7 +90,8 @@ class StartupState(State):
             if event:
                 if event.pressed:
                     if event.key_number == 1:
-                        break
+                        machine.go_to_state("party")
+                        return
 
             # Use a rainbow of colors, shifting each column of pixels
             self.hue = self.hue + 7
