@@ -1,7 +1,5 @@
 import time
 
-# from setup import rotary_enc
-
 
 class State(object):
     def __init__(self):

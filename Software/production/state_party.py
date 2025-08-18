@@ -3,8 +3,8 @@ from rainbowio import colorwheel
 
 from setup import pixels, num_pixels
 from setup import keys
-from setup import current_brightness
 from state import State
+import global_tools
 
 # from menu import menu_select, show_menu, show_select
 
@@ -21,11 +21,11 @@ class PartyState(State):
         self.j = 0
 
     def enter(self, machine):
-        self.brightness = current_brightness
         State.enter(self, machine)
 
     def exit(self, machine):
-        current_brightness = self.brightness
+        pixels.fill((0,0,0))
+        pixels.show()
         State.exit(self, machine)
 
     def update(self, machine):
@@ -45,15 +45,18 @@ class PartyState(State):
                 self.pattern_index = (self.pattern_index - 1) % pattern_count
             # Brightness controls
             elif event.key_number == 0:
-                if self.brightness <= 0.5:
-                    self.brightness += 0.05
-                    pixels.brightness = self.brightness
-            elif event.key_number == 4:
-                if self.brightness >= 0.05:
-                    self.brightness -= 0.05
+                if global_tools.current_brightness <= 0.45:
+                    global_tools.current_brightness += 0.05
                 else:
-                    self.brightness = 0.0
-                pixels.brightness = self.brightness
+                    global_tools.current_brightness = 0.5
+                pixels.brightness = global_tools.current_brightness
+
+            elif event.key_number == 4:
+                if global_tools.current_brightness >= 0.05:
+                    global_tools.current_brightness -= 0.05
+                else:
+                    global_tools.current_brightness = 0.0
+                pixels.brightness = global_tools.current_brightness
 
         # Pattern 0: Classic rainbow
         if self.pattern_index == 0:

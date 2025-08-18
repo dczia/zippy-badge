@@ -1,26 +1,29 @@
-import time
-
 from setup import pixels
 from setup import keys
+from setup import sensor
 from state import State
 
 import fontio
+import time
 from adafruit_display_text.bitmap_label import Label
 from adafruit_bitmap_font import bitmap_font
 from displayio import Bitmap
 from rainbowio import colorwheel
 import global_tools
 
-# from menu import menu_select, show_menu, show_select
 
-
-class StartupState(State):
+class ScrollState(State):
 
     @property
     def name(self):
-        return "startup"
+        return "scroll_text"
+
+    def __init__(self):
+        self.hue = 0
+        self.target_hue = 0
 
     def enter(self, machine):
+
         # Most of this is for scrolling text and can be moved if we use it anywhere else
         # Putting it here for now to make this work quickly
         tom_thumb = bitmap_font.load_font("tom-thumb.pcf", Bitmap)
@@ -71,9 +74,13 @@ class StartupState(State):
         # Create a label object
         self.label = Label(text="text", font=self.font)
         self.bitmap = self.label.bitmap
+
         self.hue = 0
-        self.label.text = "     DCZIA     "
+        self.label.text = "    DCZIA    "
         self.bitmap = self.label.bitmap
+        self.go_next = False
+        pixels.fill((0, 0, 0))
+        pixels.show()
         State.enter(self, machine)
 
     def exit(self, machine):
@@ -82,16 +89,31 @@ class StartupState(State):
         State.exit(self, machine)
 
     def update(self, machine):
-
+        pixels.fill((0, 0, 0))
+        pixels.show()
         for i in range(self.bitmap.width):
-
-            # Poll for key press and cycle to next mode, put in loop to allow intro skip
             event = keys.events.get()
             if event:
                 if event.pressed:
                     if event.key_number == 1:
                         machine.go_to_state("party")
                         return
+
+                # Brightness controls
+                elif event.key_number == 0:
+                    if global_tools.current_brightness <= 0.45:
+                        global_tools.current_brightness += 0.05
+                    else:
+                        global_tools.current_brightness = 0.5
+                    pixels.brightness = global_tools.current_brightness
+
+                elif event.key_number == 4:
+                    if global_tools.current_brightness >= 0.05:
+                        global_tools.current_brightness -= 0.05
+                    else:
+                        global_tools.current_brightness = 0.0
+                    pixels.brightness = global_tools.current_brightness
+
 
             # Use a rainbow of colors, shifting each column of pixels
             self.hue = self.hue + 7
@@ -104,9 +126,7 @@ class StartupState(State):
 
             # Draw in the next line of text
             for y in range(7):
-                
                 # Select black or color depending on the bitmap pixel
                 pixels[6 - y] = color * self.bitmap[i, y]
             pixels.show()
             time.sleep(0.15)
-        machine.go_to_state("party")
