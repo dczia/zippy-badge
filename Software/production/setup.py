@@ -8,13 +8,13 @@ import adafruit_sdcard
 import pio_i2s
 import adafruit_msa3xx
 import keypad
+import global_tools
 
 # Setup neopixels
 pixel_pin = board.GP13
 num_pixels = 42
-current_brightness = 0.1
 pixels = neopixel.NeoPixel(
-    pixel_pin, num_pixels, brightness=current_brightness, auto_write=False
+    pixel_pin, num_pixels, brightness=global_tools.current_brightness, auto_write=False
 )
 
 # Setup microphone

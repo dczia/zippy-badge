@@ -9,7 +9,7 @@ from adafruit_display_text.bitmap_label import Label
 from adafruit_bitmap_font import bitmap_font
 from displayio import Bitmap
 from rainbowio import colorwheel
-from setup import current_brightness
+import global_tools
 
 # from menu import menu_select, show_menu, show_select
 
@@ -71,38 +71,40 @@ class StartupState(State):
         # Create a label object
         self.label = Label(text="text", font=self.font)
         self.bitmap = self.label.bitmap
-
         self.hue = 0
         self.label.text = "     DCZIA     "
         self.bitmap = self.label.bitmap
-        self.brightness = current_brightness
-
         State.enter(self, machine)
 
     def exit(self, machine):
-        current_brightness = self.brightness
+        pixels.fill((0,0,0))
+        pixels.show()
         State.exit(self, machine)
 
     def update(self, machine):
 
         for i in range(self.bitmap.width):
+
             # Poll for key press and cycle to next mode, put in loop to allow intro skip
             event = keys.events.get()
             if event:
                 if event.pressed:
                     if event.key_number == 1:
                         break
+
             # Use a rainbow of colors, shifting each column of pixels
             self.hue = self.hue + 7
             if self.hue >= 256:
                 self.hue = self.hue - 256
             color = colorwheel(self.hue)
+
             # Scoot the old text left by 1 pixel
             pixels[7:41] = pixels[:34]
+
             # Draw in the next line of text
             for y in range(7):
+                
                 # Select black or color depending on the bitmap pixel
-                # pixels[35+y] = color * self.bitmap[i,y]
                 pixels[6 - y] = color * self.bitmap[i, y]
             pixels.show()
             time.sleep(0.15)

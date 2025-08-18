@@ -3,7 +3,7 @@ from setup import keys
 from setup import sensor
 from state import State
 from rainbowio import colorwheel
-from setup import current_brightness
+import global_tools
 
 # from menu import menu_select, show_menu, show_select
 
@@ -19,13 +19,11 @@ class AccelState(State):
         self.target_hue = 0
 
     def enter(self, machine):
-        global current_brightness
-        pixels.fill((0, 0, 0))
-        self.brightness = current_brightness
         State.enter(self, machine)
 
     def exit(self, machine):
-        current_brightness = self.brightness
+        pixels.fill((0,0,0))
+        pixels.show()
         State.exit(self, machine)
 
     def update(self, machine):
@@ -38,15 +36,18 @@ class AccelState(State):
 
                 # Brightness controls
                 elif event.key_number == 0:
-                    if self.brightness <= 0.5:
-                        self.brightness += 0.05
-                        pixels.brightness = self.brightness
-                elif event.key_number == 4:
-                    if self.brightness >= 0.05:
-                        self.brightness -= 0.05
+                    if global_tools.current_brightness <= 0.45:
+                        global_tools.current_brightness += 0.05
                     else:
-                        self.brightness = 0.0
-                    pixels.brightness = self.brightness
+                        global_tools.current_brightness = 0.5
+                    pixels.brightness = global_tools.current_brightness
+
+                elif event.key_number == 4:
+                    if global_tools.current_brightness >= 0.05:
+                        global_tools.current_brightness -= 0.05
+                    else:
+                        global_tools.current_brightness = 0.0
+                    pixels.brightness = global_tools.current_brightness
 
         # Get accelerometer data
         acc_x, acc_y, acc_z = sensor.acceleration

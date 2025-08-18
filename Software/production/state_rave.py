@@ -7,7 +7,7 @@ from setup import pixels
 from setup import mic
 from state import State
 from setup import keys
-from setup import current_brightness
+import global_tools
 
 
 class RaveState(State):
@@ -28,13 +28,10 @@ class RaveState(State):
         self.previous_input = "none"
         self.running_max = 0
         self.running_min = 0
-        self.brightness = current_brightness
         self.exit_flag = False
         State.enter(self, machine)
 
     def exit(self, machine):
-        global current_brightness
-        current_brightness = self.brightness
         pixels.fill((0, 0, 0))
         pixels.show()
         State.exit(self, machine)
@@ -46,17 +43,21 @@ class RaveState(State):
             if event.pressed:
                 if event.key_number == 1:
                     self.exit_flag = True
+                    
                 # Brightness controls
                 elif event.key_number == 0:
-                    if self.brightness <= 0.5:
-                        self.brightness += 0.05
-                        pixels.brightness = self.brightness
-                elif event.key_number == 4:
-                    if self.brightness >= 0.05:
-                        self.brightness -= 0.05
+                    if global_tools.current_brightness <= 0.45:
+                        global_tools.current_brightness += 0.05
                     else:
-                        self.brightness = 0.0
-                    pixels.brightness = self.brightness
+                        global_tools.current_brightness = 0.5
+                    pixels.brightness = global_tools.current_brightness
+
+                elif event.key_number == 4:
+                    if global_tools.current_brightness >= 0.05:
+                        global_tools.current_brightness -= 0.05
+                    else:
+                        global_tools.current_brightness = 0.0
+                    pixels.brightness = global_tools.current_brightness
 
         # Adding to smooth the transition between modes
         if self.exit_flag is True:
