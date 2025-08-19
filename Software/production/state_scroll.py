@@ -86,11 +86,11 @@ class ScrollState(State):
         State.exit(self, machine)
 
     def update(self, machine):
-        self.label.yelling = ["    DCZIA    ",
-                              "    ZIPPY    ",
-                              "    1337  wAr3z    ",
-                              "    MALORT  PLZ    ",
-                              "    HACK  THE  PLANET    "]
+        self.label.yelling = ["     DCZIA     ",
+                              "     ZIPPY     ",
+                              "     1337  wAr3z     ",
+                              "     MALORT  PLZ     ",
+                              "     HACK  THE  PLANET     "]
         self.label.text = self.label.yelling[self.label.selector]
         self.bitmap = self.label.bitmap
 
@@ -155,4 +155,4 @@ class ScrollState(State):
                 # Select black or color depending on the bitmap pixel
                 pixels[6 - y] = color * self.bitmap[i, y]
             pixels.show()
-            time.sleep(0.1)
+            time.sleep(0.11)
