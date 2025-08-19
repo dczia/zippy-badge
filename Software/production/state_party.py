@@ -24,18 +24,18 @@ class PartyState(State):
         State.enter(self, machine)
 
     def exit(self, machine):
-        pixels.fill((0,0,0))
+        pixels.fill((0, 0, 0))
         pixels.show()
         State.exit(self, machine)
 
     def update(self, machine):
         pattern_count = 3
-        
+
         # Check for button presses
         event = keys.events.get()
         if event and event.pressed:
             if event.key_number == 1:
-                machine.go_to_state("accel")
+                machine.go_to_state("scroll_text")
                 return
             # Next pattern
             elif event.key_number == 2:

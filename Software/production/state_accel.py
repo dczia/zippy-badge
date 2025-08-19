@@ -26,7 +26,7 @@ class AccelState(State):
         State.enter(self, machine)
 
     def exit(self, machine):
-        pixels.fill((0,0,0))
+        pixels.fill((0, 0, 0))
         pixels.show()
         State.exit(self, machine)
 
@@ -38,13 +38,15 @@ class AccelState(State):
             if event.pressed:
                 if event.key_number == 1:
                     self.exit_flag = True
-                    
+
                 # Next pattern
                 elif event.key_number == 2:
-                    self.pattern_index = (self.pattern_index + 1) % pattern_count
+                    self.pattern_index = (
+                        self.pattern_index + 1) % pattern_count
                 # Previous pattern
                 elif event.key_number == 3:
-                    self.pattern_index = (self.pattern_index - 1) % pattern_count
+                    self.pattern_index = (
+                        self.pattern_index - 1) % pattern_count
 
                 # Brightness controls
                 elif event.key_number == 0:
@@ -62,7 +64,7 @@ class AccelState(State):
                     pixels.brightness = global_tools.current_brightness
 
         if self.exit_flag is True:
-            machine.go_to_state("rave")
+            machine.go_to_state("party")
 
         else:
             # Get accelerometer data
@@ -90,26 +92,29 @@ class AccelState(State):
                 # Pattern 1: Intensity-based pattern
                 # Use total acceleration to determine color intensity
                 total_acc = (acc_x ** 2 + acc_y ** 2 + acc_z ** 2) ** 0.5
-                self.target_hue = int((total_acc * 20) % 256)  # More movement = more color change
-                
+                # More movement = more color change
+                self.target_hue = int((total_acc * 20) % 256)
+
             elif self.pattern_index == 2:
                 # Pattern 2: Tilt Level Meter
                 # Move colors based on tilt angle
-                tilt_x = int((acc_x + 10) * (num_pixels/20))  # Convert tilt to pixel position
-                tilt_x = max(0, min(num_pixels-1, tilt_x))  # Constrain to valid pixel range
-                
+                # Convert tilt to pixel position
+                tilt_x = int((acc_x + 10) * (num_pixels/20))
+                # Constrain to valid pixel range
+                tilt_x = max(0, min(num_pixels-1, tilt_x))
+
                 # Update trail positions
                 self.trail_positions = [tilt_x] + self.trail_positions[:-1]
-                
+
                 # Clear pixels
                 pixels.fill((0, 0, 0))
-                
+
                 # Draw trail with fading colors
                 for i, pos in enumerate(self.trail_positions):
                     if 0 <= pos < num_pixels:
                         color = colorwheel((self.hue + i * 30) % 256)
                         pixels[pos] = color
-                
+
                 # Skip the normal color fill
                 pixels.show()
                 self.hue = (self.hue + 1) % 256

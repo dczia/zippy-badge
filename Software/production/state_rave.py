@@ -43,7 +43,7 @@ class RaveState(State):
             if event.pressed:
                 if event.key_number == 1:
                     self.exit_flag = True
-                    
+
                 # Brightness controls
                 elif event.key_number == 0:
                     if global_tools.current_brightness <= 0.45:
@@ -60,7 +60,7 @@ class RaveState(State):
                     pixels.brightness = global_tools.current_brightness
 
         if self.exit_flag is True:
-            machine.go_to_state("scroll_text")
+            machine.go_to_state("accel")
 
         else:
             try:
