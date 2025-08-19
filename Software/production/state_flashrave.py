@@ -10,11 +10,11 @@ from setup import keys
 import global_tools
 
 
-class RaveState(State):
+class FlashRaveState(State):
 
     @property
     def name(self):
-        return "rave"
+        return "flashrave"
 
     def __init__(self):
         self.previous_intensity = 0
@@ -29,6 +29,7 @@ class RaveState(State):
         self.running_max = 0
         self.running_min = 0
         self.exit_flag = False
+        self.columnColor = 0
         State.enter(self, machine)
 
     def exit(self, machine):
@@ -37,6 +38,15 @@ class RaveState(State):
         State.exit(self, machine)
 
     def update(self, machine):
+        columnColor = [
+            (255, 0, 0),
+            (255, 0, 115),
+            (0, 0, 255),
+            (0, 255, 0),
+            (255, 255, 0),
+            (155, 155, 155)
+        ]
+
         # Poll for key press and cycle to next mode
         event = keys.events.get()
         if event:
@@ -52,6 +62,19 @@ class RaveState(State):
                         global_tools.current_brightness = 0.5
                     pixels.brightness = global_tools.current_brightness
 
+                elif event.key_number == 2:
+                    # right
+                    if self.columnColor < len(columnColor) - 1:
+                        self.columnColor += 1
+                    else:
+                        self.columnColor = 0
+                elif event.key_number == 3:
+                    # left
+                    if self.columnColor == 0:
+                        self.columnColor = len(columnColor) - 1
+                    else:
+                        self.columnColor -= 1
+
                 elif event.key_number == 4:
                     if global_tools.current_brightness >= 0.05:
                         global_tools.current_brightness -= 0.05
@@ -60,7 +83,7 @@ class RaveState(State):
                     pixels.brightness = global_tools.current_brightness
 
         if self.exit_flag is True:
-            machine.go_to_state("heckrave")
+            machine.go_to_state("accel")
 
         else:
             try:
@@ -82,7 +105,8 @@ class RaveState(State):
                     data,
                 )
 
-                bins = [data[12], data[10], data[8], data[7], data[4], data[1]]
+                bins = [data[12], data[12], data[12],
+                        data[12], data[12], data[12]]
 
                 # Calculate running max for auto_scaling
                 self.running_max = (self.running_max * 24 + max(bins)) / 25
@@ -90,31 +114,22 @@ class RaveState(State):
 
                 # Fill pixels based on values
                 pixels.fill((0, 0, 0))
-                column = [
-                    (255, 0, 0),
-                    (255, 0, 0),
-                    (192, 0, 64),
-                    (128, 0, 128),
-                    (64, 0, 192),
-                    (0, 0, 255),
-                    (0, 0, 255),
-                ]
                 for index, item in enumerate(bins):
                     step = (self.running_max - self.running_min) / 7
                     if item > step + self.running_min:
-                        pixels[(index) * 7] = column[6]
+                        pixels[(index) * 7] = columnColor[self.columnColor]
                     if item > step * 2 + self.running_min:
-                        pixels[(index) * 7 + 1] = column[5]
+                        pixels[(index) * 7 + 1] = columnColor[self.columnColor]
                     if item > step * 3 + self.running_min:
-                        pixels[(index) * 7 + 2] = column[4]
+                        pixels[(index) * 7 + 2] = columnColor[self.columnColor]
                     if item > step * 4 + self.running_min:
-                        pixels[(index) * 7 + 3] = column[3]
+                        pixels[(index) * 7 + 3] = columnColor[self.columnColor]
                     if item > step * 5 + self.running_min:
-                        pixels[(index) * 7 + 4] = column[2]
+                        pixels[(index) * 7 + 4] = columnColor[self.columnColor]
                     if item > step * 6 + self.running_min:
-                        pixels[(index) * 7 + 5] = column[1]
+                        pixels[(index) * 7 + 5] = columnColor[self.columnColor]
                     if item > step * 7 + self.running_min:
-                        pixels[(index) * 7 + 6] = column[0]
+                        pixels[(index) * 7 + 6] = columnColor[self.columnColor]
                 pixels.show()
             except:
                 pass
