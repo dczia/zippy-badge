@@ -9,15 +9,15 @@ class State(object):
     def name(self):
         return ""
 
-    def enter(self, core_machine):
+    def enter(self, machine):
         time.sleep(0.3)
         pass
 
-    def exit(self, core_machine):
+    def exit(self, machine):
         pass
 
-    def update(self, core_machine):
-        return True
+    def update(self, machine):
+        return None
 
 
 class StateMachine(object):

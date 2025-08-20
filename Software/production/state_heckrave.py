@@ -10,11 +10,11 @@ from setup import keys
 import global_tools
 
 
-class RaveState(State):
+class HeckRaveState(State):
 
     @property
     def name(self):
-        return "rave"
+        return "heckrave"
 
     def __init__(self):
         self.previous_intensity = 0
@@ -29,6 +29,7 @@ class RaveState(State):
         self.running_max = 0
         self.running_min = 0
         self.exit_flag = False
+        self.columnColor = 0
         State.enter(self, machine)
 
     def exit(self, machine):
@@ -37,6 +38,15 @@ class RaveState(State):
         State.exit(self, machine)
 
     def update(self, machine):
+        columnColor = [
+            (255, 0, 0),
+            (255, 0, 115),
+            (0, 0, 255),
+            (0, 255, 0),
+            (255, 255, 0),
+            (155, 155, 155)
+        ]
+
         # Poll for key press and cycle to next mode
         event = keys.events.get()
         if event:
@@ -52,6 +62,19 @@ class RaveState(State):
                         global_tools.current_brightness = 0.5
                     pixels.brightness = global_tools.current_brightness
 
+                elif event.key_number == 2:
+                    # right
+                    if self.columnColor < len(columnColor) - 1:
+                        self.columnColor += 1
+                    else:
+                        self.columnColor = 0
+                elif event.key_number == 3:
+                    # left
+                    if self.columnColor == 0:
+                        self.columnColor = len(columnColor) - 1
+                    else:
+                        self.columnColor -= 1
+
                 elif event.key_number == 4:
                     if global_tools.current_brightness >= 0.05:
                         global_tools.current_brightness -= 0.05
@@ -60,7 +83,7 @@ class RaveState(State):
                     pixels.brightness = global_tools.current_brightness
 
         if self.exit_flag is True:
-            machine.go_to_state("heckrave")
+            machine.go_to_state("flashrave")
 
         else:
             try:
@@ -82,7 +105,7 @@ class RaveState(State):
                     data,
                 )
 
-                bins = [data[12], data[10], data[8], data[7], data[4], data[1]]
+                bins = [data[7], data[5], data[3], data[3], data[5], data[7]]
 
                 # Calculate running max for auto_scaling
                 self.running_max = (self.running_max * 24 + max(bins)) / 25
@@ -91,13 +114,13 @@ class RaveState(State):
                 # Fill pixels based on values
                 pixels.fill((0, 0, 0))
                 column = [
-                    (255, 0, 0),
-                    (255, 0, 0),
-                    (192, 0, 64),
-                    (128, 0, 128),
-                    (64, 0, 192),
-                    (0, 0, 255),
-                    (0, 0, 255),
+                    columnColor[self.columnColor],
+                    columnColor[self.columnColor],
+                    columnColor[self.columnColor],
+                    columnColor[self.columnColor],
+                    columnColor[self.columnColor],
+                    columnColor[self.columnColor],
+                    columnColor[self.columnColor],
                 ]
                 for index, item in enumerate(bins):
                     step = (self.running_max - self.running_min) / 7
